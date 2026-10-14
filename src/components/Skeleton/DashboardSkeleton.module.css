@@ -1,0 +1,9 @@
+.block { border-radius: 28px; border: 1px solid var(--border); background: linear-gradient(100deg, rgba(255, 255, 255, 0.04) 30%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.04) 70%); background-size: 200% 100%; animation: shimmer 1.6s linear infinite; }
+.hero { height: 340px; }
+.wide { height: 220px; margin-top: 2rem; }
+.game { height: 300px; }
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}

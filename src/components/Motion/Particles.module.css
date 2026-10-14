@@ -1,0 +1,9 @@
+.field { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.dot { position: absolute; bottom: -12px; left: var(--x); width: var(--s); height: var(--s); border-radius: 50%; opacity: 0; background: radial-gradient(circle, rgba(255, 224, 138, 0.9), rgba(245, 197, 66, 0)); animation: rise var(--d) linear var(--delay) infinite; }
+
+@keyframes rise {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  10%  { opacity: 0.65; }
+  90%  { opacity: 0.4; }
+  100% { transform: translate(var(--drift), -110vh); opacity: 0; }
+}

@@ -1,0 +1,15 @@
+.page { position: relative; z-index: 1; }
+.progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; transform-origin: 0 50%; background: linear-gradient(90deg, 	
+#ffe08a, 	
+#c8921a); z-index: 50; }
+.orb { position: fixed; top: 20vh; right: -10vw; width: 40vw; height: 40vw; max-width: 520px; max-height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(	
+200, 146, 26, 0.25), transparent 65%); filter: blur(30px); pointer-events: none; z-index: 0; }
+.intro { padding: 3.5rem 0 2.5rem; }
+.kicker { margin: 0 0 1rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; font-weight: 800; }
+.title { margin: 0; color: #fff; font-size: clamp(2.4rem, 8vw, 5.5rem); line-height: 1.02; font-weight: 800; letter-spacing: -0.03em; }
+.state { text-align: center; padding: 5rem 1rem; }
+.section { margin-top: 5rem; }
+.footerSpace { height: 5rem; }
+.previewRow { margin-top: 3rem; text-align: center; }
+.preview { border-radius: 14px; padding: 0.6rem 1.2rem; font-weight: 700; font-size: 0.85rem; color: var(--muted); background: transparent; border: 1px dashed var(--border); cursor: pointer; transition: color 0.2s ease, border-color 0.2s ease; }
+.preview:hover, .preview:focus-visible { color: #fff; border-color: rgba(245, 197, 66, 0.5); outline: none; }

@@ -1,0 +1,45 @@
+.hero {
+  display: grid; gap: 2rem; align-items: center; height: 100%;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(	
+245, 197, 66, 0.14), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+@media (min-width: 768px) { .hero { grid-template-columns: 1.3fr 1fr; } }
+
+.pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.8rem; border-radius: 999px; font-size: 0.78rem; font-weight: 800; color: var(--accent); background: rgba(	
+245, 197, 66, 0.12); border: 1px solid rgba(	
+245, 197, 66, 0.3); }
+.label { margin: 1.4rem 0 0; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.level { margin: 0; font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1.05; background: linear-gradient(90deg, #fff, 	
+#ffe08a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.name { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem; padding: 0.3rem 0.8rem; border-radius: 999px; font-weight: 700; font-size: 0.85rem; color: var(--silver); background: rgba(255, 255, 255, 0.07); }
+.sub { margin: 1rem 0 1.5rem; max-width: 34rem; color: var(--muted); }
+
+.stats { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
+.stat { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.85rem 1rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); color: var(--accent); }
+.stat span { color: var(--muted); font-size: 0.75rem; }
+.stat strong { color: #fff; font-size: 1.25rem; }
+.levelRow { display: flex; align-items: center; gap: 1.25rem; margin-top: 1.4rem; }
+.labelTight { margin: 0; }
+.badgeWrap { filter: drop-shadow(0 0 18px rgba(245, 197, 66, 0.35)); animation: badgeGlow 3.5s ease-in-out infinite; }
+.badge { position: relative; width: 92px; height: 104px; display: grid; place-content: center; text-align: center; background: linear-gradient(145deg, #ffe08a, #c8921a); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+.badge::before { content: ''; position: absolute; inset: 4px; background: #1b1d30; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+.badgeSmall { position: relative; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--muted); font-weight: 800; }
+.badgeNum { position: relative; font-size: 2rem; line-height: 1; font-weight: 800; color: #ffe08a; }
+
+@keyframes badgeGlow {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(245, 197, 66, 0.25)); }
+  50%      { filter: drop-shadow(0 0 26px rgba(245, 197, 66, 0.5)); }
+}.level { font-size: clamp(2rem, 4vw, 3rem); white-space: nowrap; }
+@media (max-width: 480px) {
+  .hero { padding: 1.25rem; }
+  .levelRow { gap: 0.9rem; }
+  .badge { width: 72px; height: 82px; }
+  .badgeNum { font-size: 1.5rem; }
+  .level { font-size: 1.9rem; }
+}

@@ -1,0 +1,11 @@
+.wrap { text-align: center; }
+.ring { position: relative; width: min(230px, 100%); margin: 0 auto; }
+.svg { width: 100%; height: auto; display: block; filter: drop-shadow(0 0 14px rgba(	
+200, 146, 26, 0.35)); }
+.track { fill: none; stroke: rgba(255, 255, 255, 0.08); stroke-width: 12; }
+.fill { fill: none; stroke-width: 12; stroke-linecap: round; transition: stroke-dashoffset 1.4s ease-out; }
+.center { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+.center strong { font-size: 2.6rem; line-height: 1; color: #fff; font-weight: 800; }
+.center span { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.xp { margin: 1rem 0 0.1rem; font-weight: 800; color: #fff; }
+.left { margin: 0; color: var(--accent); font-weight: 700; }

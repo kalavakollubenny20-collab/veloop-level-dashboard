@@ -1,0 +1,24 @@
+.overlay { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 1rem; background: rgba(10, 11, 22, 0.78); backdrop-filter: blur(6px); }
+.panel { width: min(420px, 100%); text-align: center; padding: 2rem 1.5rem; border-radius: 28px; border: 1px solid rgba(245, 197, 66, 0.35); background: linear-gradient(160deg, #23253d, #181a2e); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
+.eyebrow { margin: 0; color: var(--accent); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; }
+.title { margin: 0.4rem 0 0; font-size: 2.2rem; background: linear-gradient(90deg, #ffe08a, #f5c542); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sub { margin: 0.2rem 0 0; color: var(--muted); }
+
+.stage { position: relative; display: grid; place-items: center; height: 170px; margin: 0.8rem 0; }
+.ring { position: absolute; width: 150px; height: 150px; border-radius: 50%; border: 2px solid rgba(245, 197, 66, 0.35); animation: ringPulse 3s ease-out infinite; }
+.badgeWrap { filter: drop-shadow(0 0 22px rgba(245, 197, 66, 0.45)); }
+.badge { position: relative; width: 112px; height: 126px; display: grid; place-content: center; background: linear-gradient(145deg, #ffe08a, #c8921a); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+.badge::before { content: ''; position: absolute; inset: 5px; background: #1b1d30; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+.badgeSmall { position: relative; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--muted); font-weight: 800; }
+.badgeNum { position: relative; font-size: 2.6rem; line-height: 1; font-weight: 800; color: #ffe08a; }
+
+.reward { display: grid; gap: 0.1rem; padding: 0.9rem; margin-bottom: 1.2rem; border-radius: 18px; background: rgba(245, 197, 66, 0.08); border: 1px solid rgba(245, 197, 66, 0.3); }
+.reward strong { font-size: 1.5rem; color: var(--reward); }
+.reward span { color: var(--muted); font-size: 0.8rem; }
+.btn { width: 100%; border: 0; border-radius: 16px; padding: 0.85rem; font-weight: 800; color: #1b1d30; background: linear-gradient(90deg, #ffe08a, #f5c542); cursor: pointer; transition: filter 0.2s ease; }
+.btn:hover, .btn:focus-visible { filter: brightness(1.08); outline: none; }
+
+@keyframes ringPulse {
+  0%   { transform: scale(0.85); opacity: 0.8; }
+  100% { transform: scale(1.5);  opacity: 0; }
+}

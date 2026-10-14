@@ -1,0 +1,27 @@
+.card { height: 100%; padding: 1.75rem; text-align: center; border-radius: 28px; border: 1px solid rgba(243, 217, 164, 0.25); background: linear-gradient(160deg, rgba(243, 217, 164, 0.1), rgba(255, 255, 255, 0.03)); backdrop-filter: blur(12px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35); }
+.top { display: flex; justify-content: space-between; align-items: center; }
+.title { margin: 0; color: var(--reward); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.75rem; font-weight: 800; }
+.info { background: none; border: 0; color: var(--muted); cursor: pointer; }
+.info:hover, .info:focus-visible { color: #fff; }
+.tip { text-align: left; font-size: 0.85rem; color: var(--muted); background: var(--card-2); border-radius: 14px; padding: 0.75rem; margin-top: 0.75rem; }
+.gift { position: relative; display: inline-grid; place-items: center; width: 100px; height: 100px; margin: 1.4rem 0 0.8rem; border-radius: 28px; color: var(--reward); background: rgba(243, 217, 164, 0.08); border: 1px dashed rgba(243, 217, 164, 0.5); box-shadow: 0 0 40px rgba(243, 217, 164, 0.12); animation: float 4s ease-in-out infinite; }
+.lock { position: absolute; right: -8px; bottom: -8px; padding: 5px; border-radius: 50%; background: var(--card-solid); color: #fff; border: 1px solid var(--border); }
+.amount { margin: 0; font-size: 2.2rem; font-weight: 800; background: linear-gradient(90deg, var(--reward), var(--reward-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sub { margin: 0.3rem 0 1.2rem; color: var(--muted); }
+.track { height: 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
+.fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--reward), var(--reward-2)); }
+.pct { margin: 0.5rem 0 0; font-size: 0.82rem; color: var(--muted); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-7px); }
+}
+.coin { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #fff1b8, #f5c542); box-shadow: 0 0 10px rgba(245, 197, 66, 0.6); animation: bob 3s ease-in-out infinite; }
+.c1 { left: -22px; top: 10px; }
+.c2 { right: -26px; top: 30px; width: 10px; height: 10px; animation-delay: 0.8s; }
+.c3 { left: -12px; bottom: 6px; width: 8px; height: 8px; animation-delay: 1.6s; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
