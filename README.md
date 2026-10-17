@@ -116,7 +116,8 @@ Animations are subtle and switch off when the user prefers reduced motion:
 - Gold dust, cursor glow and smooth scrolling
 
 ## Screenshots
-Add the screenshots here.
+### Overview
+![Dashboard overview](screenshots/overview.png)
 
 ## Author
 Benny Kalavakollu
