@@ -1,4 +1,5 @@
-import { Sparkles, Zap, Target, ArrowUpRight } from 'lucide-react'
+import { useState } from 'react'
+import { Sparkles, Zap, Target, ArrowUpRight, Info } from 'lucide-react'
 import XPProgress from '../XPProgress/XPProgress'
 import useCountUp from '../../hooks/useCountUp'
 import styles from './LevelHero.module.css'
@@ -6,8 +7,7 @@ import styles from './LevelHero.module.css'
 export default function LevelHero({ data, percent, remaining, levelName }) {
   const pad = (n) => String(n).padStart(2, '0')
   const xp = useCountUp(data.currentXP)
-  const currentXP = useCountUp(data.currentXP)
-  const remainingXP = useCountUp(remaining)
+  const [showInfo, setShowInfo] = useState(false)
 
   return (
     <section className={styles.hero}>
@@ -31,6 +31,22 @@ export default function LevelHero({ data, percent, remaining, levelName }) {
         <p className={styles.sub}>
           Keep earning XP, unlock new levels, and discover better rewards along the way.
         </p>
+
+        <button
+          type="button"
+          className={styles.infoBtn}
+          aria-expanded={showInfo}
+          aria-label="About XP and levels"
+          onClick={() => setShowInfo(!showInfo)}
+        >
+          <Info size={16} /> How XP works
+        </button>
+        {showInfo && (
+          <p className={styles.infoText}>
+            XP helps you progress through VELoop Rewards levels. As you reach new levels, you may
+            unlock additional rewards and experiences according to the platform's level system.
+          </p>
+        )}
 
         <div className={styles.stats}>
           <div className={styles.stat}>
