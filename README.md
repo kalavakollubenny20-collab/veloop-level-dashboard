@@ -117,6 +117,7 @@ Animations are subtle and switch off when the user prefers reduced motion:
 
 ## Screenshots
 ### Overview
+![Dashboard overview](screenshots/overview.png)
 ![Dashboard overview](screenshots/overview2.png)
 
 ## Author
